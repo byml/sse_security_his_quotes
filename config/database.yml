@@ -1,0 +1,20 @@
+default: &default
+  adapter: mysql2
+  host: u1.ibyml.net
+  port: 3308
+  username: byml
+  password: bym1
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: sse_security_his_quotes_development
+
+test:
+  <<: *default
+  database: sse_security_his_quotes_test
+
+production:
+  <<: *default
+  database: sse_security_his_quotes_production
